@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pokemon-filter.css">
+    <link rel="stylesheet" href="css/pokemon-table.css">
+</head>
+<body>
+    <header>
+        <img src="assets/pokemon/0.png">
+        <h1>Pokedex</h1>
+    </header>
+
+    <main>
+        <section id="filter" class="all-filters">
+            <h2>Search for Pokemon</h2>
+
+            <label>
+                Name: 
+                <input id="filter-name">
+            </label>
+
+            <label>
+                Height: 
+                <input id="filter-height">
+            </label>
+
+            <label>
+                Weight: 
+                <input id="filter-weight">
+            </label>
+
+            <label>
+                Attack: 
+                <input id="filter-attack">
+            </label>
+            
+            <label>
+               Defense: 
+                <input id="filter-defense">
+            </label>
+        </section>
+
+
+        <section>
+            <h2>Pokemon</h2>
+            <table>
+                <thead id="pokedex-header">
+                    <tr>
+                        <td class="sort asc">Name</td>
+                        <td>Height</td>
+                        <td>Weight</td>
+                        <td>Attack</td>
+                        <td>Defense</td>
+                    </tr>
+                </thead>
+                <tbody id="pokedex-body">
+
+                </tbody>
+            </table>
+        </section>
+
+
+    </main>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/pokemon-api.js"></script>
+    <script type="module" src="js/pokemon-filter.js"></script>
+    <script type="module" src="js/pokemon-table.js"></script>
+    
+</body>
+</html>

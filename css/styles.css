@@ -1,0 +1,33 @@
+body {
+    background: #DD092F;
+    margin: 0;
+  }
+
+  h1{
+      text-align: center;
+      margin: 0;
+  }
+main{
+   background-color: #fff
+}
+
+
+
+header, section {
+    padding: 10px 20px;
+}
+
+#section{
+    background-color: black;
+    color: white;
+}
+header{
+    display: flex;
+    align-content: center;
+}
+
+img{
+    width: 75px;
+    height: 5%;
+}
+
