@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Lab</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="assets/pokemon.png">
+        <h1>Pokemon Lab</h1>
+    </header>
+    
+    <main>    
+        <section id="filter" class="secondary">
+            <form action="">
+            <h2>Search for Pokemon</h2>
+            <label>
+                Name:
+                <input id="filter-name">
+            </label>
+            <label>
+                Type:
+                <input id="filter-type">
+            </label>
+            <label>
+                Type2:
+                <input id="filter-type2">
+            </label>
+            <label>
+                Attack:
+            <input type="number" id="filter-attack">
+            </label>
+            <label>
+                Defense:
+                <input type="number" required id="filter-defense">
+            </label>
+        </form>
+         </section>
+
+        <section id="list"> 
+            <h2>Pokemon</h2>
+            <table>
+                <thead id="pokemon-header">
+                    <tr>
+                        <td>color</td>
+                        <td class="sort" data-property="pokemon">speed</td>
+                        <td class="sort" data-property="type_1">name</td>
+                        <td class="sort" data-property="type_2">Type 1</td>
+                        <td class="sort" data-property="attack">type 2</td>
+                        <td class="sort" data-property="defense">attack</td>
+                        <td class="sort" data-property="hp">defense</td>
+                        <td class="sort" data-property="hp">Shape</td>
+
+                    </tr>
+                </thead>
+                <tbody id="pokemon-body"></tbody>
+
+            </table>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
