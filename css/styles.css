@@ -1,33 +1,46 @@
 body {
-    background: #DD092F;
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    color: #000000;
     margin: 0;
-  }
-
-  h1{
-      text-align: center;
-      margin: 0;
-  }
-main{
-   background-color: #fff
 }
 
+* {
+    box-sizing: border-box;
+}
 
+.action {
+    background: #39499B;
+    color: white;
+    border: 1px solid white;
+}
+
+.taskItem{
+    border: 1px solid #3D4C4A;
+
+}
+
+.danger {
+    background: red;
+    color: white;
+    border: 1px solid white;
+}
+
+ul{
+   list-style: none; 
+}
+header {
+    background: #DDAABB;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 header, section {
     padding: 10px 20px;
 }
 
-#section{
-    background-color: black;
-    color: white;
-}
-header{
-    display: flex;
-    align-content: center;
-}
-
-img{
-    width: 75px;
-    height: 5%;
+h1{
+    text-align: center;
 }
 
