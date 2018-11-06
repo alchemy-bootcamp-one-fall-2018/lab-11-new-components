@@ -16,13 +16,13 @@ function makeRow(pokemon) {
             </tr>`;
 }
 
-const pokemonsTable = {                                //here is where remove and add for filter goes
-    init(pokemons) {
+class pokemonsTable = {                                //here is where remove and add for filter goes
+    constructor(pokemons) {
         for(let i = 0; i < pokemons.length; i++) {
             const tr = makeRow(pokemons[i]);
             tableBody.appendChild(tr);  
         }
-    },
+    }
     update(pokemons) {
         while(tableBody.lastElementChild) {
             tableBody.lastElementChild.remove();

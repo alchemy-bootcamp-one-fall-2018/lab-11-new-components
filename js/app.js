@@ -7,9 +7,9 @@ const pokemons = pokemonApi.getAll();
 pokemonsTable.init(pokemons);    //data down
 
 //data down
-pokemonsFilter.init(function(pokemonFilter, type_1Filter, 
+pokemonsFilter.init((pokemonFilter, type_1Filter, 
     type_2Filter, hpFilter, ability_1Filter, ability_2Filter, 
-    ability_hiddenFilter) {
+    ability_hiddenFilter) => {
         
     let filtered;
         
@@ -17,7 +17,7 @@ pokemonsFilter.init(function(pokemonFilter, type_1Filter,
             || hpFilter || ability_1Filter || ability_2Filter 
             || ability_hiddenFilter) {
                
-        filtered = pokemons.filter(function(pokemon) { 
+        filtered = pokemons.filter((pokemon)=>{ 
             const hasPokemon = !pokemonsFilter || pokemon.pokemon.includes(pokemonFilter);
             const hasType1 = !type_1Filter || pokemon.type_1.includes(type_1Filter);
             const hasType2 = !type_2Filter || pokemon.type_2.includes(type_2Filter);

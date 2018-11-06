@@ -8,7 +8,7 @@ const hiddenInput = document.getElementById('filter-hiddenAbility');
 
 const pokemonsFilter = {
     init(onFilter) {
-        function handleFilter() {
+        function handleFilter(){
             onFilter(nameInput.value, type1Input.value,   
                 type2Input.value, hpInput.value, ability1Input.value,
                 ability2Input.value, hiddenInput.value);
