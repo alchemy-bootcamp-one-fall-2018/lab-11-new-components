@@ -1,31 +1,55 @@
 import html from './html.js';
 
 
-onst addTodo = {
+function makeTemplate(){
+   return html` 
+    <form id="add-form">
+        <label>
+            Task:
+            <input required name="task">
+        </label>
+        <label>
+            Due Date:
+            <input type="date" required name="date">
+        </label>
+        <label>
+            <button class="action">Add task</button>
+        </label>
+    </form>
+    `;
+}
 
-    init(onAdd){
-        const form = document.getElementById('add-form');
+class AddForm {
+    constructor(onAdd) {
+        this.onAdd = onAdd;
+    }
 
-        form.addEventListener('submit', function(event) {
-        
+    render(){
+        const dom = makeTemplate();
+
+        const form = dom.querySelector('add-form');
+
+        form.addEventListener('action', event => {
+            // prevent form from reloading page
             event.preventDefault();
 
             //form elements
             const elements = form.elements;
 
-            const task = {
-                task: elements.task.value,
-                date: new Date(elements.date.value)
+            const todoList = {
+                task: elements.name.value,
+                date: elements.date.value,
+                action: elements.action.value
             };
 
-            onAdd(task);
+            this.onAdd(todoList);
 
             form.reset();
             document.activeElement.blur();
         });
+
+        return dom;
     }
-};
-
-
+}
 
 export default addTodo;
