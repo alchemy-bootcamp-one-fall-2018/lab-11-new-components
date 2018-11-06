@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <link rel="stylesheet" href="css/add-todo.css">
+    
+</head>
+<body>
+    <header>
+        <img class="placeholder" >
+        <h1> Hooray for things to do!</h1>
+    </header>
+
+    <main>
+        <section id="add-todo">
+            <h2>Add a new task</h2>
+            <form id="add-form">
+                <label>
+                    Task:
+                    <input required name="task">
+                </label>
+                <label>
+                    Due Date:
+                    <input type="date" required name="date">
+                </label>
+                <label>
+                    <button class="action">Add task</button>
+                </label>
+            </form>
+        </section>
+
+        <section>
+            <h2>Task</h2>
+            <ul id="tasks"></ul>
+        </section>
+ 
+    </main>
+   
+    <script type="module"  src="js/app.js"></script>
+</body>
+</html>

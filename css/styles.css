@@ -1,0 +1,46 @@
+body {
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    color: #000000;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.action {
+    background: #39499B;
+    color: white;
+    border: 1px solid white;
+}
+
+.taskItem{
+    border: 1px solid #3D4C4A;
+
+}
+
+.danger {
+    background: red;
+    color: white;
+    border: 1px solid white;
+}
+
+ul{
+   list-style: none; 
+}
+header {
+    background: #DDAABB;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header, section {
+    padding: 10px 20px;
+}
+
+h1{
+    text-align: center;
+}
+
