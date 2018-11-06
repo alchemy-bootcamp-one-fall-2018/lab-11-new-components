@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lists</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/addto.css">
+</head>
+
+<body>
+    <header>
+        <h3>MAKE LISTS:</h3>
+        <form id="add-form">
+                <label>
+                    ADD A TASK:
+                    <input type="text"  id="name" required name="name" placeholder="Enter Task">
+                </label>
+                <label>
+                    DUE DATE:
+                    <input type="date" id="due" required name="due">
+                </label>
+                </label>
+                    <button class="action" id="submit">Submit</button>
+                </form>
+    </header>
+    <main>
+        <section id="add-to">
+            
+            <ul id="lists"></ul>
+           
+           
+        </section>
+       
+    </main>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
