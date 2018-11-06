@@ -1,0 +1,1 @@
+New Components Lab (#11), rewriting original code for Pokedex lab.
