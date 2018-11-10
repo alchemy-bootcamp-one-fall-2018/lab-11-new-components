@@ -56,14 +56,10 @@ class Filter {
             }
 
             var filteredResult = new GenerateTable(filtered);
-            const pokeTable = document.getElementById('pokeTable');
             const root = document.getElementById('root');
-            console.log(root.childNodes);
             for(let i = root.childNodes.length - 1; i > 3; i--) {
                 root.removeChild(root.childNodes[i]);
             }
-            console.log(root.childNodes);
-            // root.removeChild(root.childNodes[1]);
             root.appendChild(filteredResult.render());
         });
 

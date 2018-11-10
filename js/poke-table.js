@@ -41,20 +41,6 @@ class GenerateTable {
        
     render() {
         const dom = makeTemplate(this.pokemon);
-
-        // this.pokemon.forEach(item => {
-        //     html += `
-        //         <tr>
-        //             <td><img src="assets/pokemon/${item.id}.png"></td>
-        //             <td>${item.pokemon}</td>
-        //             <td>${item.type_1}</td>
-        //             <td>${item.type_2}</td>
-        //             <td>${item.weight}</td>
-        //             <td>${item.height}</td>
-        //             <td>${item.attack}</td>
-        //         </tr>
-        //     `;
-        // });
         return dom;
     }
 }
