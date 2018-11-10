@@ -1,17 +1,37 @@
+import html from './html.js';
 
-function makeTemplate() {
-    var html = `
-        <tr>
-            <th>Image</th>
-            <th>Pokemon Name</th>
-            <th>Type_1</th>
-            <th>Type_2</th>
-            <th>Weight</th>
-            <th>Height</th>
-            <th>Attack</th>
-        </tr>
+function makeTemplate(pokemon) {
+    var info = '';
+
+    pokemon.forEach(item => {
+        info += `
+            <tr>
+                <td><img src="assets/pokemon/${item.id}.png"></td>
+                <td>${item.pokemon}</td>
+                <td>${item.type_1}</td>
+                <td>${item.type_2}</td>
+                <td>${item.weight}</td>
+                <td>${item.height}</td>
+                <td>${item.attack}</td>
+            </tr>
         `;
-    return html;
+    });
+
+    return html`
+        <h2>Pokemons:</h2>
+        <table id="pokeTable">
+            <tr>
+                <th>Image</th>
+                <th>Pokemon Name</th>
+                <th>Type_1</th>
+                <th>Type_2</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Attack</th>
+            </tr>
+            ${info}
+        </table>
+        `;
 }
 
 class GenerateTable {
@@ -20,24 +40,22 @@ class GenerateTable {
     }
        
     render() {
-        const pokeTable = document.getElementById('pokeTable');
-        var html = makeTemplate();
+        const dom = makeTemplate(this.pokemon);
 
-        this.pokemon.forEach(item => {
-            html += `
-                <tr>
-                    <td><img src="assets/pokemon/${item.id}.png"></td>
-                    <td>${item.pokemon}</td>
-                    <td>${item.type_1}</td>
-                    <td>${item.type_2}</td>
-                    <td>${item.weight}</td>
-                    <td>${item.height}</td>
-                    <td>${item.attack}</td>
-                </tr>
-            `;
-        });
-    
-        pokeTable.innerHTML = html;
+        // this.pokemon.forEach(item => {
+        //     html += `
+        //         <tr>
+        //             <td><img src="assets/pokemon/${item.id}.png"></td>
+        //             <td>${item.pokemon}</td>
+        //             <td>${item.type_1}</td>
+        //             <td>${item.type_2}</td>
+        //             <td>${item.weight}</td>
+        //             <td>${item.height}</td>
+        //             <td>${item.attack}</td>
+        //         </tr>
+        //     `;
+        // });
+        return dom;
     }
 }
 

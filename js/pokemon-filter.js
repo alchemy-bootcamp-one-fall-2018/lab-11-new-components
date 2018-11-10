@@ -1,10 +1,27 @@
 import PokeApi from './pokemon-api.js';
 import GenerateTable from './poke-table.js';
+import html from './html.js';
 
 var Pokemon = new PokeApi;
 
 function makeTemplate() {
-    return document.getElementById('search');
+    return html`
+        <section id="search">
+            <select>
+                <option name="selectText" value="pokemon">Pokemon Name</option>
+                <option name="selectText" value="type_1">Type_1</option>
+                <option name="selectText" value="type_2">Type_2</option>
+            </select>
+            <input type="text" id="textBox" placeholder="text">
+
+            <select>
+                <option name="selectNum" value="weight" value="1">Weight</option>
+                <option name="selectNum" value="height" value="1">Height</option>
+                <option name="selectNum" value="attack" value="1">Attack</option>
+            </select>
+            <input type="number" id="numBox" placeholder="minimum value">
+        </section>
+    `;
 }
 
 class Filter {
@@ -13,7 +30,8 @@ class Filter {
     }
     
     render() {
-        const search = makeTemplate();
+        const dom = makeTemplate();
+        const search = dom.getElementById('search');
         
         search.addEventListener('keyup', () => {
             let filtered = [];
@@ -38,8 +56,19 @@ class Filter {
             }
 
             var filteredResult = new GenerateTable(filtered);
-            filteredResult.render();
+            const pokeTable = document.getElementById('pokeTable');
+            const root = document.getElementById('root');
+            console.log(root.childNodes);
+            for(let i = root.childNodes.length - 1; i > 3; i--) {
+                root.removeChild(root.childNodes[i]);
+            }
+            console.log(root.childNodes);
+            // root.removeChild(root.childNodes[1]);
+            root.appendChild(filteredResult.render());
         });
+
+
+        return dom;
     }
 }
 
