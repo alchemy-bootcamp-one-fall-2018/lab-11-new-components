@@ -37,7 +37,7 @@ class TodoApp {
 
         addTodoSection.appendChild(addTodo.render());
 
-        const todoList = new TodoList(todo => {
+        const todoList = new TodoList(todos, todo => {
             const index = todoApi.remove(todo);
             todoList.remove(index);
         });
