@@ -1,11 +1,11 @@
 let todos = [
     {
         task: 'Grocery shopping',
-        dueDate: [new Date('10/30/18')]
+        dueDate: [new Date('10/30/2018')]
     },
     {
         task: 'Do laundry',
-        dueDate: [new Date('10/31/18')]
+        dueDate: [new Date('10/31/2018')]
     }
 ];
 
@@ -35,6 +35,7 @@ const todosApi = {
         if(index !== -1) {
             todos.splice(index, 1);
             saveTodos();
+            return index;
         }
     }
   

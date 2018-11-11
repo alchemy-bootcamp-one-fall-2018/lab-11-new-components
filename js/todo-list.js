@@ -1,43 +1,61 @@
+import html from './html.js';
+
+
+function makeTemplate() {
+    return html`
+        <ul id="todos"></ul>
+        
+    `;
+}
+ 
 function makeTodo(todo) {
-    const html = /*html*/`
+    return html`
       <li class="todo ${new Date(todo.dueDate) < Date.now() ? 'overdue' : ''}">
           <h4 class="task"> ${todo.task} </h4>
           <h5 class="date"> ${todo.dueDate}</h5>
           <button class="remove">Remove</button>
       </li>
-        `;
-        
-    const template = document.createElement('template');
-
-    template.innerHTML = html;
-
-    return template.content;
+    `;
+       
 }
 
-const list = document.getElementById('todos');
 
-const todoList = {
- 
-    init(todos, onRemove) {
-        for(let i = 0; i < todos.length; i++) {
-            todoList.add(todos[i]);
+class TodoList {
+    constructor(todos, onRemove) {
+        this.todos = todos;
+        this.onRemove = onRemove;
+    }
+   
+    render() {
+        const dom = makeTemplate();
+        this.list = dom.querySelector('ul');
+
+        for(let i = 0; i < this.todos.length; i++) {
+            this.add(this.todos[i]);
         }
-        todoList.onRemove = onRemove;
-    },
+       
+        return dom; 
+    }
+   
     add(todo) {
         const dom = makeTodo(todo);
 
-        const removeButton = dom.querySelector('button');
-        const listItem = dom.querySelector('li');
+        if(this.onRemove) {
+            const removeButton = dom.querySelector('button');
+    
+            removeButton.addEventListener('click', () => {
+                this.onRemove(todo);
+            
+            });
 
-        removeButton.addEventListener('click', () => {
-            todoList.onRemove(todo);
-            listItem.remove();
-        });
+        }
 
-        list.appendChild(dom);
+        this.list.appendChild(dom);
     }
-};
+    remove(index) {
+        this.list.querySelectorAll('li')[index].remove();
+    }
+}
 
-export default todoList;
+export default TodoList;
 
