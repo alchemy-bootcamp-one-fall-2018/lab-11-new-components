@@ -4,18 +4,13 @@ import todoApi from './todos-api.js';
 
 const todos = todoApi.getAll();
 
-todoList.init(todos, function(todo) {
-  // this is the onRemove listener
+todoList.init(todos, todo => {
 
     todoApi.remove(todo);
 });
 
-addTodo.init(function(todo) {
-  // this is the onAdd listener
+addTodo.init(todo => {
 
-  // tell the api service first
     todoApi.add(todo);
-
-  // then update components
     todoList.add(todo);
 });

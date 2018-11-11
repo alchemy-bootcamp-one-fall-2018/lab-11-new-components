@@ -30,7 +30,7 @@ const todoList = {
         const removeButton = dom.querySelector('button');
         const listItem = dom.querySelector('li');
 
-        removeButton.addEventListener('click', function() {
+        removeButton.addEventListener('click', () => {
             todoList.onRemove(todo);
             listItem.remove();
         });

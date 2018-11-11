@@ -3,7 +3,7 @@ const addTodo = {
     init(onAdd) {
         const form = document.getElementById('add-form');
 
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', event => {
             event.preventDefault();     
             const elements = form.elements;
 
