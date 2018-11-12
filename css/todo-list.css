@@ -1,0 +1,39 @@
+ul#todos {
+    margin: -30px 0px 0px 0px;
+    background-color: lightslategrey;
+}
+
+li.todo {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid white;
+}
+
+input[type="checkbox"] {
+    margin-right: 15px;
+    zoom: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
+.todo button {
+    margin-bottom: 5px;
+}
+
+.todo-due {
+    color: red;
+    margin-left: 5px;
+    /* margin-left: 85px; */
+    /* border-right: 100px; */
+}
+
+.todo-done {
+    color: green;
+    margin-left: 55px;
+    /* margin-right: 40px; */
+}

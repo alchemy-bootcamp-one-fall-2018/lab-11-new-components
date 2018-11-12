@@ -1,59 +1,27 @@
 * {
     font-family: Helvetica, sans-serif;
-    margin: 0px auto;
-}
-
-/* ----------- Body > Header styles ----------- */
-body {
-    /* display: block; */
-    background-image: url("../assets/pokemon/89.png");
-    background-color: purple;
-    align-content: center;
+    display: box;
 }
 
 header {
-    background-color: purple;
+    text-align: center;
+    margin: 0 auto;
 }
 
 h1 {
-    color: red;
-    font-style: italic;
-    font-size: 40px;
-    padding: 2px;
-    text-align: center;
+    margin: 0 auto;
 }
 
-/* ----------- Body > Main styles ----------- */
-h2 {
-    color: purple;
-    text-align: center;
+.logo {
+    width: 10em;
 }
 
-div {
-    background-color: yellowgreen;
+.danger, .action {
+    height: 35px;
+    background: violet;
+    border: 1px solid red;
 }
 
-h3 {
-    color: purple;
-    text-align: center;
-    font-style: italic;
-}
-
-span a {
-    color: yellow;
-    font-weight: 100;
-}
-
-span a:hover {
-    color: red;
-}
-
-footer {
-    background-color: purple;
-    margin: 0px auto;
-    padding: 5px;
-    text-align: center;
-    color: yellowgreen;
-    font-style: italic;
-    font-weight: 600;
+.danger:hover, .action:hover {
+    background: indianred;
 }
