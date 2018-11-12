@@ -34,7 +34,7 @@ class AddTodo {
 
             const todo = {
                 task: elements.task.value,
-                due: elements.dueDate.value
+                dueDate: elements.dueDate.value
             };
 
             this.onAdd(todo);
