@@ -18,7 +18,7 @@ const pokeTable = {
             const row = makeRow(pokemon[i]);
             tableBody.appendChild(row); // adds row to tableBody
         }
-    }, 
+    },
     update(pokemon) {
         while(tableBody.lastElementChild) {
             tableBody.lastElementChild.remove();
