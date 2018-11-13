@@ -1,0 +1,44 @@
+#todos {
+  padding: 0;
+  margin: 0;
+}
+
+
+li.todo {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.todo .task {
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.todo .date {
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+}
+
+.todo button {
+  margin-bottom: 5px;
+}
+
+.overdue {
+  color: red;
+}
+
+@media screen and (min-width: 350px) {
+  li {
+      width: 300px;
+      display: inline-flex;
+      justify-content: space-between;
+  }
+}
