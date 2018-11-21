@@ -12,19 +12,20 @@ function makeRow(pokemons) {
     </tr>`;
 }
 
-const pokeTable = {
-    init(pokemon) {
+class PokeTable {
+    constructor(pokemon) {
         for(let i = 0; i < pokemon.length; i++) {
             const row = makeRow(pokemon[i]);
             tableBody.appendChild(row); // adds row to tableBody
         }
-    },
+    }
     update(pokemon) {
         while(tableBody.lastElementChild) {
             tableBody.lastElementChild.remove();
         }
-        pokeTable.init(pokemon); // initialize pokeTable with value of pokemon array
+        return new PokeTable(pokemon);
+        // PokeTable.init(pokemon); // initialize pokeTable with value of pokemon array
     }
-};
+}
 
-export default pokeTable;
+export default PokeTable;
