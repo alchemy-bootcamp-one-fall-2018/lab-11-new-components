@@ -25,25 +25,3 @@ class PokeFilter {
 }
 
 export default PokeFilter;
-
-// const pokeFilter = {
-//     init(onFilter) {
-//         nameFilter.addEventListener('keyup', ()=> {
-//             onFilter(nameFilter.value, type_1Filter.value, type_2Filter.value, ability1Filter.value, hpFilter.value);
-//         });
-//         type_1Filter.addEventListener('keyup', ()=> {
-//             onFilter(nameFilter.value, type_1Filter.value, type_2Filter.value, ability1Filter.value, hpFilter.value);
-//         });
-//         type_2Filter.addEventListener('keyup', ()=> {
-//             onFilter(nameFilter.value, type_1Filter.value, type_2Filter.value, ability1Filter.value, hpFilter.value);
-//         });
-//         ability1Filter.addEventListener('keyup', ()=> {
-//             onFilter(nameFilter.value, type_1Filter.value, type_2Filter.value, ability1Filter.value, hpFilter.value);
-//         });
-//         hpFilter.addEventListener('keyup', ()=> {
-//             onFilter(nameFilter.value, type_1Filter.value, type_2Filter.value, ability1Filter.value, hpFilter.value);
-//         });
-//     }
-// };
-
-// export default pokeFilter;
