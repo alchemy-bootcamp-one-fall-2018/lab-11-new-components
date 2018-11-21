@@ -4,8 +4,8 @@ const type_2Filter = document.getElementById('poke-type_2');
 const ability1Filter = document.getElementById('poke-ability-1');
 const hpFilter = document.getElementById('poke-hp');
 
-const pokeFilter = {
-    init(onFilter) {
+class PokeFilter {
+    constructor(onFilter) {
         nameFilter.addEventListener('keyup', ()=> {
             onFilter(nameFilter.value, type_1Filter.value, type_2Filter.value, ability1Filter.value, hpFilter.value);
         });
@@ -22,9 +22,9 @@ const pokeFilter = {
             onFilter(nameFilter.value, type_1Filter.value, type_2Filter.value, ability1Filter.value, hpFilter.value);
         });
     }
-};
+}
 
-export default pokeFilter;
+export default PokeFilter;
 
 // const pokeFilter = {
 //     init(onFilter) {
